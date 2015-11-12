@@ -7,7 +7,7 @@ class ProductTest < ActiveSupport::TestCase
 
   test "product attributes must no be empty" do
     product = Product.new
-    assert product.valid?
+    assert product.invalid?
     assert product.errors[:title].any?
     assert product.errors[:description].any?
     assert product.errors[:price].any?
