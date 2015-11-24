@@ -33,7 +33,7 @@ class LineItemsController < ApplicationController
         # We want to redirect you to the cart instead of back to the line item itself. 
         # Since the line item object knows how to find the cart object, all we need to do
         # is add .cart to the method all
-        format.html { redirect_to @line_item.cart}
+        format.html { redirect_to store_url}
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }
