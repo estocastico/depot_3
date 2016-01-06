@@ -16,9 +16,11 @@
   <div id="columns">
     <div id="side">
 <!-- START_HIGHLIGHT -->
+<% if @cart %>
       <div id="cart">
         <%= render @cart %>
       </div>
+<% end %>
 
 <!-- END_HIGHLIGHT -->
       <ul>
